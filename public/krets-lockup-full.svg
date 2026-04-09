@@ -1,0 +1,12 @@
+<svg width="512" height="640" viewBox="0 0 512 640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('https://api.fontshare.com/v2/css?f[]=satoshi@700,500&amp;display=swap');
+  </style>
+  <!-- Mark -->
+  <circle cx="256" cy="220" r="170" fill="none" stroke="#CF5C36" stroke-width="26"/>
+  <circle cx="256" cy="220" r="43" fill="#CF5C36"/>
+  <!-- Wordmark -->
+  <text x="256" y="500" text-anchor="middle" font-family="Satoshi, -apple-system, Helvetica, Arial, sans-serif" font-size="96" font-weight="700" fill="#1C1917" letter-spacing="-3">Krets</text>
+  <!-- Tagline -->
+  <text x="256" y="555" text-anchor="middle" font-family="Satoshi, -apple-system, Helvetica, Arial, sans-serif" font-size="24" font-weight="500" fill="#A8A29E" letter-spacing="5">YOUR INNER CIRCLE</text>
+</svg>
