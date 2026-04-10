@@ -22,7 +22,7 @@ export function Hero() {
       </p>
 
       <p className="mx-auto mb-10 max-w-[420px] text-[17px] leading-relaxed text-text-body">
-        A private space for your family, your friends, and the people who matter most.
+        Private spaces for your family, your friends, and the people who matter most.
         No ads. No algorithm. Just your people.
       </p>
 

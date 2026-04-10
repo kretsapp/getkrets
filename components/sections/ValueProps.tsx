@@ -5,7 +5,7 @@ const cards = [
     icon: Users,
     title: "Your family",
     description:
-      "Share photos, videos, and updates in a private timeline. No strangers, no followers, no likes. Just your people.",
+      "Share photos, videos, and updates in a private timeline. No strangers, no followers, just your people.",
   },
   {
     icon: Heart,

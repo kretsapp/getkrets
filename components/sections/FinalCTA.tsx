@@ -19,7 +19,7 @@ export function FinalCTA() {
       <WaitlistForm variant="cta" buttonText="Get early access" />
 
       <p className="mt-4 text-[13px] text-text-muted">
-        Free to join circles. $4.99/mo to create your own.
+        No spam, ever.
       </p>
     </section>
   );
