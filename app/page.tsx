@@ -10,10 +10,10 @@ export default function Page() {
   return (
     <main>
       <Hero />
+      <PhoneMockup />
       <ValueProps />
       <ProblemSection />
       <HowItWorks />
-      <PhoneMockup />
       <FinalCTA />
       <Footer />
     </main>

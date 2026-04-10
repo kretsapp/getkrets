@@ -1,4 +1,5 @@
 import { WaitlistForm } from "@/components/WaitlistForm";
+import { KretsMark } from "@/components/KretsMark";
 
 export function FinalCTA() {
   return (
@@ -6,6 +7,9 @@ export function FinalCTA() {
       aria-labelledby="cta-heading"
       className="light bg-bg px-6 py-20 text-center md:py-28"
     >
+      <div className="mb-5 flex justify-center">
+        <KretsMark size={40} />
+      </div>
       <h2
         id="cta-heading"
         className="mb-3 text-[23px] font-bold text-text-primary"

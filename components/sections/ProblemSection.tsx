@@ -1,14 +1,14 @@
 const quotes = [
   {
     text: "I post family photos on Instagram, but I don\u2019t want everyone seeing them.",
-    attribution: "Sarah, mom of 3",
+    attribution: "Maria, mom",
   },
   {
-    text: "Our family WhatsApp is chaos. Photos disappear in a flood of messages.",
-    attribution: "Marcus, college friend group",
+    text: "Our group WhatsApp is chaos. Photos disappear in a flood of messages.",
+    attribution: "Theo, college friend group",
   },
   {
-    text: "We used a family app once. It shut down and we lost everything.",
+    text: "We used to have a family app, but it shut down and we lost all photos.",
     attribution: "Lin, family of 12",
   },
 ];
@@ -31,13 +31,19 @@ export function ProblemSection() {
           {quotes.map((quote) => (
             <blockquote
               key={quote.text}
-              className="rounded-r-[var(--radius-button)] border-l-3 border-l-accent bg-surface px-5 py-4"
+              className="relative rounded-2xl bg-surface px-6 pb-5 pt-8"
             >
-              <p className="text-[15px] italic leading-relaxed text-text-body">
-                &ldquo;{quote.text}&rdquo;
+              <span
+                className="absolute left-5 top-2 text-3xl font-serif leading-none text-accent select-none"
+                aria-hidden="true"
+              >
+                &ldquo;
+              </span>
+              <p className="text-[15px] leading-relaxed text-text-body">
+                {quote.text}
               </p>
-              <footer className="mt-2 text-[13px] text-text-muted">
-                &mdash; {quote.attribution}
+              <footer className="mt-3 text-[13px] font-medium text-text-secondary">
+                {quote.attribution}
               </footer>
             </blockquote>
           ))}

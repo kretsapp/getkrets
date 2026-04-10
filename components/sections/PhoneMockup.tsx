@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { KretsMark } from "@/components/KretsMark";
 
 const screens = [
   { src: "/screen-groups.webp", alt: "Groups screen showing Friends and Family circles" },
@@ -11,25 +10,20 @@ export function PhoneMockup() {
   return (
     <section
       aria-label="App preview"
-      className="relative py-20 md:py-28"
+      className="relative pt-0 pb-12 md:pt-2 md:pb-20"
     >
-      {/* Soft ambient glow */}
+      {/* Warm accent glow */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
-          background:
-            "radial-gradient(ellipse 70% 50% at 50% 60%, rgba(207,92,54,0.08) 0%, rgba(207,92,54,0.03) 40%, transparent 70%)",
+          background: [
+            "radial-gradient(ellipse 65% 50% at 50% 55%, rgba(207,92,54,0.25) 0%, rgba(207,92,54,0.10) 45%, transparent 75%)",
+            "radial-gradient(ellipse 45% 40% at 25% 50%, rgba(220,100,60,0.15) 0%, transparent 65%)",
+            "radial-gradient(ellipse 45% 40% at 75% 50%, rgba(180,70,45,0.12) 0%, transparent 65%)",
+          ].join(", "),
         }}
         aria-hidden="true"
       />
-
-      {/* Logo + tagline */}
-      <div className="relative mb-12 flex flex-col items-center gap-3 px-6 text-center md:mb-16">
-        <KretsMark size={40} />
-        <p className="text-sm font-medium uppercase tracking-[4px] text-text-secondary">
-          Your inner circles
-        </p>
-      </div>
 
       {/* Mobile: horizontal scroll */}
       <div className="relative md:hidden">
