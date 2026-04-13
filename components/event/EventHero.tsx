@@ -36,7 +36,7 @@ export function EventHero({
   groupName,
 }: Props) {
   return (
-    <div className="relative w-full aspect-[2/1] overflow-hidden rounded-b-2xl">
+    <div className="relative w-full aspect-[2/1] overflow-hidden">
       {coverImageUrl ? (
         <>
           <Image
