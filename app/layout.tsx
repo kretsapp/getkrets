@@ -5,20 +5,20 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://getkrets.app"),
   title: "Krets — Your inner circles",
   description:
-    "A private app for sharing photos and moments with your family and closest friends. No ads, no algorithm. Join the waitlist.",
+    "A private iPhone app for sharing photos and moments with your family and closest friends. Free for members, 60 days free for hosts. No ads, no algorithm.",
   openGraph: {
     type: "website",
     url: "https://getkrets.app",
     siteName: "Krets",
     title: "Krets — Your inner circles",
     description:
-      "A private app for sharing photos and moments with your family and closest friends. No ads, no algorithm. Join the waitlist.",
+      "A private iPhone app for sharing photos and moments with your family and closest friends. Free for members, 60 days free for hosts.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Krets — Your inner circles",
     description:
-      "A private app for sharing photos and moments with your family and closest friends. No ads, no algorithm. Join the waitlist.",
+      "A private iPhone app for sharing photos and moments with your family and closest friends. Free for members, 60 days free for hosts.",
   },
   alternates: { canonical: "https://getkrets.app" },
 };

@@ -1,8 +1,9 @@
 import { Hero } from "@/components/sections/Hero";
-import { ValueProps } from "@/components/sections/ValueProps";
-import { ProblemSection } from "@/components/sections/ProblemSection";
-import { HowItWorks } from "@/components/sections/HowItWorks";
 import { PhoneMockup } from "@/components/sections/PhoneMockup";
+import { ValueProps } from "@/components/sections/ValueProps";
+import { FeatureTour } from "@/components/sections/FeatureTour";
+import { PricingTeaser } from "@/components/sections/PricingTeaser";
+import { PrivacyStance } from "@/components/sections/PrivacyStance";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Footer } from "@/components/sections/Footer";
 
@@ -12,8 +13,9 @@ export default function Page() {
       <Hero />
       <PhoneMockup />
       <ValueProps />
-      <ProblemSection />
-      <HowItWorks />
+      <FeatureTour />
+      <PricingTeaser />
+      <PrivacyStance />
       <FinalCTA />
       <Footer />
     </main>
