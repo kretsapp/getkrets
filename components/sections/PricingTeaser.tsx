@@ -1,36 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import { Check } from "lucide-react";
-
-const tiers = [
-  {
-    name: "Free",
-    eyebrow: "For members",
-    price: "0 kr",
-    priceNote: "Forever",
-    bullets: [
-      "Join any Krets you’re invited to",
-      "Post, comment, react, vote",
-      "Contribute to event albums and birthday capsules",
-      "Keep your full history",
-    ],
-    accent: false,
-  },
-  {
-    name: "Krets Keeper",
-    eyebrow: "For hosts",
-    price: "$4.99 / €5.99 / £4.99 / 59 kr",
-    priceNote: "per month, or $39.99 / €44.99 / £39.99 / 499 kr per year",
-    bullets: [
-      "Everything in Free",
-      "Create your own Krets",
-      "Host as many circles as you like",
-      "60 days free, no card needed",
-    ],
-    accent: true,
-  },
-] as const;
+import { useCurrency } from "@/components/CurrencyProvider";
+import { CurrencySwitcher } from "@/components/CurrencySwitcher";
+import { PRICES } from "@/lib/pricing";
 
 export function PricingTeaser() {
+  const { currency } = useCurrency();
+  const monthly = PRICES.keeperMonthly[currency];
+  const yearly = PRICES.keeperYearly[currency];
+
   return (
     <section
       aria-labelledby="pricing-heading"
@@ -43,55 +23,88 @@ export function PricingTeaser() {
         >
           Free for everyone in your circle
         </h2>
-        <p className="mx-auto mb-12 max-w-[480px] text-center text-[15px] leading-relaxed text-text-secondary">
-          Members never pay. Hosts try Keeper free for 60 days, then $4.99 / €5.99 / £4.99 / 59 kr per month if they keep going.
+        <p className="mx-auto mb-8 max-w-[480px] text-center text-[15px] leading-relaxed text-text-secondary">
+          Members never pay. Hosts try Keeper free for 60 days, no card needed.
         </p>
 
+        <div className="mb-10 flex justify-center">
+          <CurrencySwitcher />
+        </div>
+
         <div className="mx-auto grid max-w-3xl gap-4 md:grid-cols-2">
-          {tiers.map((tier) => (
-            <div
-              key={tier.name}
-              className={`rounded-[var(--radius-card)] p-7 ${
-                tier.accent
-                  ? "border-2 border-accent bg-surface"
-                  : "border border-border bg-surface"
-              }`}
-            >
-              <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1.5px] text-accent">
-                {tier.eyebrow}
+          <div className="rounded-[var(--radius-card)] border border-border bg-surface p-7">
+            <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1.5px] text-accent">
+              For members
+            </p>
+            <h3 className="mb-4 text-[20px] font-bold text-text-primary">
+              Free
+            </h3>
+            <div className="mb-5">
+              <span className="text-[32px] font-bold text-text-primary">
+                Free
+              </span>
+              <p className="mt-0.5 text-[13px] text-text-secondary">
+                Forever, no catch
               </p>
-              <h3 className="mb-4 text-[20px] font-bold text-text-primary">
-                {tier.name}
-              </h3>
-              <div className="mb-5">
-                <span
-                  className={`font-bold text-text-primary ${
-                    tier.accent ? "text-[22px]" : "text-[32px]"
-                  }`}
-                >
-                  {tier.price}
-                </span>
-                <p className="mt-1 text-[13px] leading-relaxed text-text-secondary">
-                  {tier.priceNote}
-                </p>
-              </div>
-              <ul className="space-y-2.5">
-                {tier.bullets.map((bullet) => (
-                  <li
-                    key={bullet}
-                    className="flex items-start gap-2.5 text-[14px] leading-relaxed text-text-body"
-                  >
-                    <Check
-                      size={16}
-                      className="mt-0.5 shrink-0 text-accent"
-                      aria-hidden="true"
-                    />
-                    <span>{bullet}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
-          ))}
+            <ul className="space-y-2.5">
+              {[
+                "Join any Krets you’re invited to",
+                "Post, comment, react, vote",
+                "Contribute to event albums and birthday capsules",
+                "Keep your full history",
+              ].map((bullet) => (
+                <li
+                  key={bullet}
+                  className="flex items-start gap-2.5 text-[14px] leading-relaxed text-text-body"
+                >
+                  <Check
+                    size={16}
+                    className="mt-0.5 shrink-0 text-accent"
+                    aria-hidden="true"
+                  />
+                  <span>{bullet}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="rounded-[var(--radius-card)] border-2 border-accent bg-surface p-7">
+            <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1.5px] text-accent">
+              For hosts
+            </p>
+            <h3 className="mb-4 text-[20px] font-bold text-text-primary">
+              Krets Keeper
+            </h3>
+            <div className="mb-5">
+              <span className="text-[32px] font-bold text-text-primary">
+                {monthly}
+              </span>
+              <p className="mt-0.5 text-[13px] text-text-secondary">
+                per month, or {yearly} per year
+              </p>
+            </div>
+            <ul className="space-y-2.5">
+              {[
+                "Everything in Free",
+                "Create your own Krets",
+                "Host as many circles as you like",
+                "60 days free, no card needed",
+              ].map((bullet) => (
+                <li
+                  key={bullet}
+                  className="flex items-start gap-2.5 text-[14px] leading-relaxed text-text-body"
+                >
+                  <Check
+                    size={16}
+                    className="mt-0.5 shrink-0 text-accent"
+                    aria-hidden="true"
+                  />
+                  <span>{bullet}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className="mt-10 text-center">

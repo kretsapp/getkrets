@@ -4,11 +4,12 @@ import { Check, X } from "lucide-react";
 import { KretsMark } from "@/components/KretsMark";
 import { AppStoreButton, AndroidComingSoon } from "@/components/AppStoreButton";
 import { Footer } from "@/components/sections/Footer";
+import { PricingPlans } from "@/components/pricing/PricingPlans";
 
 export const metadata: Metadata = {
   title: "Pricing — Krets",
   description:
-    "Krets is free for everyone you invite. Hosts try Krets Keeper free for 60 days, no card needed. After that, $4.99 / €5.99 / £4.99 / 59 kr per month, or $39.99 / €44.99 / £39.99 / 499 kr per year.",
+    "Krets is free for everyone you invite. Hosts try Krets Keeper free for 60 days, no card needed. Pricing in USD, EUR, GBP, and SEK.",
   alternates: { canonical: "https://getkrets.app/pricing" },
   openGraph: {
     type: "website",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
 };
 
 const comparison = [
-  { feature: "Join a Krets you're invited to", free: true, keeper: true },
+  { feature: "Join a Krets you’re invited to", free: true, keeper: true },
   { feature: "Post photos, videos, and updates", free: true, keeper: true },
   { feature: "Comment, react, vote in polls", free: true, keeper: true },
   { feature: "Daily Snap rounds", free: true, keeper: true },
@@ -41,19 +42,19 @@ const faqs = [
   },
   {
     q: "What happens after the 60-day trial?",
-    a: "If you don't subscribe, your Krets pauses for new posts but everything you and your members have shared stays exactly where it is. Pick up later by subscribing, or export your data anytime.",
+    a: "If you don’t subscribe, your Krets pauses for new posts but everything you and your members have shared stays exactly where it is. Pick up later by subscribing, or export your data anytime.",
   },
   {
     q: "Do I need to enter a card to start the trial?",
-    a: "No. Krets is one of the few apps that doesn't make you hand over a payment method to try the paid tier. We trust you to come back if it's worth it.",
+    a: "No. Krets is one of the few apps that doesn’t make you hand over a payment method to try the paid tier. We trust you to come back if it’s worth it.",
   },
   {
-    q: "What's a Founding Keeper?",
-    a: "The first 500 hosts get a permanently lower monthly rate ($2.99 / €2.99 / £2.99 / 39 kr) instead of the standard. The badge stays with you for life, even if you skip a month.",
+    q: "What’s a Founding Keeper?",
+    a: "The first 500 hosts get a permanently lower monthly rate. The badge stays with you for life, even if you skip a month.",
   },
   {
     q: "How do I cancel?",
-    a: "From inside the app under Settings, or directly through your Apple subscriptions. There's no hoop to jump through.",
+    a: "From inside the app under Settings, or directly through your Apple subscriptions. There’s no hoop to jump through.",
   },
   {
     q: "Is Krets on Android?",
@@ -61,7 +62,7 @@ const faqs = [
   },
   {
     q: "Why this pricing model?",
-    a: "Charging the host instead of every member keeps Krets feeling like a place you bring people to, not a service you all subscribe to. It's the same dynamic as hosting a dinner: you cover the table, your guests show up.",
+    a: "Charging the host instead of every member keeps Krets feeling like a place you bring people to, not a service you all subscribe to. It’s the same dynamic as hosting a dinner: you cover the table, your guests show up.",
   },
 ] as const;
 
@@ -78,8 +79,8 @@ export default function PricingPage() {
         >
           Free for everyone in your circle
         </h1>
-        <p className="mx-auto mb-10 max-w-[560px] text-[17px] leading-relaxed text-text-body">
-          Members never pay a thing. Hosts try Krets Keeper free for 60 days, no card needed. After that, $4.99 / €5.99 / £4.99 / 59 kr per month, or $39.99 / €44.99 / £39.99 / 499 kr per year.
+        <p className="mx-auto mb-10 max-w-[520px] text-[17px] leading-relaxed text-text-body">
+          Members never pay a thing. Hosts try Krets Keeper free for 60 days, no card needed.
         </p>
 
         <div className="flex justify-center">
@@ -88,55 +89,7 @@ export default function PricingPage() {
         <AndroidComingSoon className="mt-5" />
       </section>
 
-      <section className="light bg-bg px-6 py-16 md:py-20">
-        <div className="mx-auto grid max-w-3xl gap-5 md:grid-cols-2">
-          <div className="rounded-[var(--radius-card)] border border-border bg-surface p-7">
-            <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1.5px] text-text-muted">
-              For members
-            </p>
-            <h2 className="mb-4 text-[22px] font-bold text-text-primary">Free</h2>
-            <div className="mb-1">
-              <span className="text-[40px] font-bold text-text-primary">0 kr</span>
-            </div>
-            <p className="mb-6 text-[13px] text-text-secondary">Forever, no catch.</p>
-            <p className="text-[14px] leading-relaxed text-text-body">
-              Anyone you invite joins free and stays free. Post, comment, react, contribute to albums and capsules. Keep your full history.
-            </p>
-          </div>
-
-          <div className="rounded-[var(--radius-card)] border-2 border-accent bg-surface p-7">
-            <p className="mb-1 text-[12px] font-semibold uppercase tracking-[1.5px] text-accent">
-              For hosts
-            </p>
-            <h2 className="mb-4 text-[22px] font-bold text-text-primary">
-              Krets Keeper
-            </h2>
-            <div className="mb-1">
-              <p className="text-[20px] font-bold leading-snug text-text-primary">
-                $4.99 <span className="text-text-secondary">/</span> €5.99{" "}
-                <span className="text-text-secondary">/</span> £4.99{" "}
-                <span className="text-text-secondary">/</span> 59 kr
-              </p>
-              <p className="mt-1 text-[14px] text-text-secondary">
-                per month
-              </p>
-            </div>
-            <p className="mb-6 mt-3 text-[13px] leading-relaxed text-text-secondary">
-              Or yearly: $39.99 / €44.99 / £39.99 / 499 kr (save about 30%)
-            </p>
-            <p className="mb-3 text-[14px] leading-relaxed text-text-body">
-              Everything in Free, plus the ability to create your own circles and host the people who matter to you.
-            </p>
-            <p className="text-[13px] font-semibold text-accent">
-              60 days free, no card needed.
-            </p>
-          </div>
-        </div>
-
-        <p className="mx-auto mt-8 max-w-[560px] text-center text-[13px] leading-relaxed text-text-secondary">
-          Founding Keeper rate: the first 500 hosts pay $2.99 / €2.99 / £2.99 / 39 kr per month for life. The badge stays with you forever.
-        </p>
-      </section>
+      <PricingPlans />
 
       <section
         aria-labelledby="comparison-heading"
