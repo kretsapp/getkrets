@@ -16,8 +16,8 @@ export function FinalCTA() {
       >
         Start a Krets
       </h2>
-      <p className="mx-auto mb-8 max-w-[420px] text-[15px] leading-relaxed text-text-secondary">
-        Two months free, no card needed. After that, 59 kr per month if you keep going.
+      <p className="mx-auto mb-8 max-w-[440px] text-[15px] leading-relaxed text-text-secondary">
+        Two months free, no card needed. After that, $4.99 / €5.99 / £4.99 / 59 kr per month if you keep going.
       </p>
 
       <div className="flex justify-center">

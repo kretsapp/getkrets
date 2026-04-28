@@ -18,8 +18,8 @@ const tiers = [
   {
     name: "Krets Keeper",
     eyebrow: "For hosts",
-    price: "59 kr",
-    priceNote: "per month, or 499 kr / year",
+    price: "$4.99 / €5.99 / £4.99 / 59 kr",
+    priceNote: "per month, or $39.99 / €44.99 / £39.99 / 499 kr per year",
     bullets: [
       "Everything in Free",
       "Create your own Krets",
@@ -44,7 +44,7 @@ export function PricingTeaser() {
           Free for everyone in your circle
         </h2>
         <p className="mx-auto mb-12 max-w-[480px] text-center text-[15px] leading-relaxed text-text-secondary">
-          Members never pay. Hosts try Keeper free for 60 days, then 59 kr per month if they keep going.
+          Members never pay. Hosts try Keeper free for 60 days, then $4.99 / €5.99 / £4.99 / 59 kr per month if they keep going.
         </p>
 
         <div className="mx-auto grid max-w-3xl gap-4 md:grid-cols-2">
@@ -64,10 +64,14 @@ export function PricingTeaser() {
                 {tier.name}
               </h3>
               <div className="mb-5">
-                <span className="text-[32px] font-bold text-text-primary">
+                <span
+                  className={`font-bold text-text-primary ${
+                    tier.accent ? "text-[22px]" : "text-[32px]"
+                  }`}
+                >
                   {tier.price}
                 </span>
-                <p className="mt-0.5 text-[13px] text-text-secondary">
+                <p className="mt-1 text-[13px] leading-relaxed text-text-secondary">
                   {tier.priceNote}
                 </p>
               </div>
