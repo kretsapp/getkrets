@@ -8,7 +8,7 @@ import { Footer } from "@/components/sections/Footer";
 export const metadata: Metadata = {
   title: "Pricing — Krets",
   description:
-    "Krets is free for everyone you invite. Hosts try Krets Keeper free for 60 days, no card needed. After that, 59 kr per month or 499 kr per year.",
+    "Krets is free for everyone you invite. Hosts try Krets Keeper free for 60 days, no card needed. After that, $4.99 / €5.99 / £4.99 / 59 kr per month, or $39.99 / €44.99 / £39.99 / 499 kr per year.",
   alternates: { canonical: "https://getkrets.app/pricing" },
   openGraph: {
     type: "website",
@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     q: "What's a Founding Keeper?",
-    a: "The first 500 hosts get a permanent monthly rate of 39 kr instead of 59 kr. The badge stays with you for life, even if you skip a month.",
+    a: "The first 500 hosts get a permanently lower monthly rate ($2.99 / €2.99 / £2.99 / 39 kr) instead of the standard. The badge stays with you for life, even if you skip a month.",
   },
   {
     q: "How do I cancel?",
@@ -78,8 +78,8 @@ export default function PricingPage() {
         >
           Free for everyone in your circle
         </h1>
-        <p className="mx-auto mb-10 max-w-[520px] text-[17px] leading-relaxed text-text-body">
-          Members never pay a thing. Hosts try Krets Keeper free for 60 days, no card needed. After that, 59 kr per month or 499 kr per year.
+        <p className="mx-auto mb-10 max-w-[560px] text-[17px] leading-relaxed text-text-body">
+          Members never pay a thing. Hosts try Krets Keeper free for 60 days, no card needed. After that, $4.99 / €5.99 / £4.99 / 59 kr per month, or $39.99 / €44.99 / £39.99 / 499 kr per year.
         </p>
 
         <div className="flex justify-center">
@@ -111,12 +111,18 @@ export default function PricingPage() {
             <h2 className="mb-4 text-[22px] font-bold text-text-primary">
               Krets Keeper
             </h2>
-            <div className="mb-1 flex items-baseline gap-2">
-              <span className="text-[40px] font-bold text-text-primary">59 kr</span>
-              <span className="text-[14px] text-text-secondary">/ month</span>
+            <div className="mb-1">
+              <p className="text-[20px] font-bold leading-snug text-text-primary">
+                $4.99 <span className="text-text-secondary">/</span> €5.99{" "}
+                <span className="text-text-secondary">/</span> £4.99{" "}
+                <span className="text-text-secondary">/</span> 59 kr
+              </p>
+              <p className="mt-1 text-[14px] text-text-secondary">
+                per month
+              </p>
             </div>
-            <p className="mb-6 text-[13px] text-text-secondary">
-              Or 499 kr per year (save about 30%)
+            <p className="mb-6 mt-3 text-[13px] leading-relaxed text-text-secondary">
+              Or yearly: $39.99 / €44.99 / £39.99 / 499 kr (save about 30%)
             </p>
             <p className="mb-3 text-[14px] leading-relaxed text-text-body">
               Everything in Free, plus the ability to create your own circles and host the people who matter to you.
@@ -127,8 +133,8 @@ export default function PricingPage() {
           </div>
         </div>
 
-        <p className="mx-auto mt-8 max-w-[520px] text-center text-[13px] leading-relaxed text-text-secondary">
-          Founding Keeper rate: the first 500 hosts pay 39 kr per month for life. The badge stays with you forever.
+        <p className="mx-auto mt-8 max-w-[560px] text-center text-[13px] leading-relaxed text-text-secondary">
+          Founding Keeper rate: the first 500 hosts pay $2.99 / €2.99 / £2.99 / 39 kr per month for life. The badge stays with you forever.
         </p>
       </section>
 
