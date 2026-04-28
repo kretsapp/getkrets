@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { CurrencyProvider } from "@/components/CurrencyProvider";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://getkrets.app"),
@@ -55,7 +56,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-dvh antialiased">{children}</body>
+      <body className="min-h-dvh antialiased">
+        <CurrencyProvider>{children}</CurrencyProvider>
+      </body>
     </html>
   );
 }

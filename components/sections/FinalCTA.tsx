@@ -1,7 +1,14 @@
+"use client";
+
 import { KretsMark } from "@/components/KretsMark";
 import { AppStoreButton, AndroidComingSoon } from "@/components/AppStoreButton";
+import { useCurrency } from "@/components/CurrencyProvider";
+import { PRICES } from "@/lib/pricing";
 
 export function FinalCTA() {
+  const { currency } = useCurrency();
+  const monthly = PRICES.keeperMonthly[currency];
+
   return (
     <section
       aria-labelledby="cta-heading"
@@ -17,7 +24,7 @@ export function FinalCTA() {
         Start a Krets
       </h2>
       <p className="mx-auto mb-8 max-w-[440px] text-[15px] leading-relaxed text-text-secondary">
-        Two months free, no card needed. After that, $4.99 / €5.99 / £4.99 / 59 kr per month if you keep going.
+        Two months free, no card needed. After that, {monthly} per month if you keep going.
       </p>
 
       <div className="flex justify-center">
