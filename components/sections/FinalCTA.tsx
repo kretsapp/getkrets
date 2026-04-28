@@ -1,5 +1,5 @@
-import { WaitlistForm } from "@/components/WaitlistForm";
 import { KretsMark } from "@/components/KretsMark";
+import { AppStoreButton, AndroidComingSoon } from "@/components/AppStoreButton";
 
 export function FinalCTA() {
   return (
@@ -8,23 +8,23 @@ export function FinalCTA() {
       className="light bg-bg px-6 py-20 text-center md:py-28"
     >
       <div className="mb-5 flex justify-center">
-        <KretsMark size={40} />
+        <KretsMark size={48} />
       </div>
       <h2
         id="cta-heading"
-        className="mb-3 text-[23px] font-bold text-text-primary"
+        className="mb-3 text-[26px] font-bold tracking-tight text-text-primary"
       >
-        Join the waitlist
+        Start a Krets
       </h2>
-      <p className="mb-8 text-[15px] text-text-secondary">
-        Be among the first to try Krets when it launches.
+      <p className="mx-auto mb-8 max-w-[420px] text-[15px] leading-relaxed text-text-secondary">
+        Two months free, no card needed. After that, 59 kr per month if you keep going.
       </p>
 
-      <WaitlistForm variant="cta" buttonText="Get early access" />
+      <div className="flex justify-center">
+        <AppStoreButton />
+      </div>
 
-      <p className="mt-4 text-[13px] text-text-muted">
-        No spam, ever.
-      </p>
+      <AndroidComingSoon className="mt-5" />
     </section>
   );
 }
