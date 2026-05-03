@@ -9,7 +9,7 @@ import { PricingPlans } from "@/components/pricing/PricingPlans";
 export const metadata: Metadata = {
   title: "Pricing — Krets",
   description:
-    "Krets is free for everyone you invite. Hosts try Krets Keeper free for 60 days, no card needed. Pricing in USD, EUR, GBP, and SEK.",
+    "Krets is free for everyone you invite. Hosts try Krets Plus free for 60 days, no card needed. Pricing in USD, EUR, GBP, and SEK.",
   alternates: { canonical: "https://getkrets.app/pricing" },
   openGraph: {
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     siteName: "Krets",
     title: "Pricing — Krets",
     description:
-      "Free for everyone you invite. Hosts try Keeper free for 60 days, no card needed.",
+      "Free for everyone you invite. Hosts try Krets Plus free for 60 days, no card needed.",
   },
 };
 
@@ -38,7 +38,7 @@ const comparison = [
 const faqs = [
   {
     q: "Do members ever pay?",
-    a: "No. Anyone you invite to your Krets joins free, forever. Krets Keeper is only required to create a circle, not to be in one.",
+    a: "No. Anyone you invite to your Krets joins free, forever. Krets Plus is only required to create a circle, not to be in one.",
   },
   {
     q: "What happens after the 60-day trial?",
@@ -49,8 +49,8 @@ const faqs = [
     a: "No. Krets is one of the few apps that doesn’t make you hand over a payment method to try the paid tier. We trust you to come back if it’s worth it.",
   },
   {
-    q: "What’s a Founding Keeper?",
-    a: "The first 500 hosts get a permanently lower monthly rate. The badge stays with you for life, even if you skip a month.",
+    q: "What’s a Founding Member?",
+    a: "The first 100 hosts get a permanently lower monthly rate. The badge stays with you for life, even if you skip a month.",
   },
   {
     q: "How do I cancel?",
@@ -80,7 +80,7 @@ export default function PricingPage() {
           Free for everyone in your circle
         </h1>
         <p className="mx-auto mb-10 max-w-[520px] text-[17px] leading-relaxed text-text-body">
-          Members never pay a thing. Hosts try Krets Keeper free for 60 days, no card needed.
+          Members never pay a thing. Hosts try Krets Plus free for 60 days, no card needed.
         </p>
 
         <div className="flex justify-center">
@@ -107,7 +107,7 @@ export default function PricingPage() {
             <div className="grid grid-cols-[1fr_80px_80px] bg-surface px-5 py-4 text-[12px] font-semibold uppercase tracking-[1.2px] text-text-muted sm:grid-cols-[1fr_120px_120px]">
               <span></span>
               <span className="text-center">Free</span>
-              <span className="text-center text-accent">Keeper</span>
+              <span className="text-center text-accent">Krets Plus</span>
             </div>
             {comparison.map((row, idx) => (
               <div

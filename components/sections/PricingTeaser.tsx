@@ -24,7 +24,7 @@ export function PricingTeaser() {
           Free for everyone in your circle
         </h2>
         <p className="mx-auto mb-8 max-w-[480px] text-center text-[15px] leading-relaxed text-text-secondary">
-          Members never pay. Hosts try Keeper free for 60 days, no card needed.
+          Members never pay. Hosts try Krets Plus free for 60 days, no card needed.
         </p>
 
         <div className="mb-10 flex justify-center">
@@ -74,7 +74,7 @@ export function PricingTeaser() {
               For hosts
             </p>
             <h3 className="mb-4 text-[20px] font-bold text-text-primary">
-              Krets Keeper
+              Krets Plus
             </h3>
             <div className="mb-5">
               <span className="text-[32px] font-bold text-text-primary">

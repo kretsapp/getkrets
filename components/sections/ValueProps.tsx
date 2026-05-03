@@ -11,7 +11,7 @@ const cards = [
     icon: Gift,
     title: "60 days free, no card",
     description:
-      "Hosts get two months to try Krets Keeper without entering a payment method. Cancel anytime, keep everything.",
+      "Hosts get two months to try Krets Plus without entering a payment method. Cancel anytime, keep everything.",
   },
   {
     icon: ShieldCheck,
