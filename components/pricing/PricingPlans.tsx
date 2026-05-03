@@ -36,7 +36,7 @@ export function PricingPlans() {
             For hosts
           </p>
           <h2 className="mb-4 text-[22px] font-bold text-text-primary">
-            Krets Keeper
+            Krets Plus
           </h2>
           <div className="mb-1 flex items-baseline gap-2">
             <span className="text-[40px] font-bold text-text-primary">
@@ -57,7 +57,7 @@ export function PricingPlans() {
       </div>
 
       <p className="mx-auto mt-8 max-w-[520px] text-center text-[13px] leading-relaxed text-text-secondary">
-        Founding Keeper rate: the first 500 hosts pay {founding} per month for life. The badge stays with you forever.
+        Founding Member rate: the first 100 hosts pay {founding} per month for life. The badge stays with you forever.
       </p>
     </section>
   );

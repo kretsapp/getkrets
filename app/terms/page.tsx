@@ -116,25 +116,25 @@ export default function TermsPage() {
           </p>
         </Section>
 
-        <Section title="Krets Keeper subscriptions">
+        <Section title="Krets Plus subscriptions">
           <p>
             Krets offers an optional auto-renewing subscription called{" "}
-            <strong className="text-text-primary">Krets Keeper</strong> that
+            <strong className="text-text-primary">Krets Plus</strong> that
             unlocks additional features (e.g. creating more than the free-tier
             limit of groups). Plans currently offered:
           </p>
           <ul className="list-disc pl-5 space-y-2 mt-3">
             <li>
-              <strong className="text-text-primary">Keeper Monthly</strong> —
+              <strong className="text-text-primary">Krets Plus Monthly</strong> —
               billed every 1 month.
             </li>
             <li>
-              <strong className="text-text-primary">Keeper Yearly</strong> —
+              <strong className="text-text-primary">Krets Plus Yearly</strong> —
               billed every 12 months.
             </li>
             <li>
               <strong className="text-text-primary">
-                Founding Keeper (Monthly)
+                Founding Member (Monthly)
               </strong>{" "}
               — limited-quantity early-supporter monthly plan.
             </li>
