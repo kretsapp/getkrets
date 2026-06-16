@@ -1,3 +1,4 @@
+import RecoveryRedirect from "@/app/RecoveryRedirect";
 import { Hero } from "@/components/sections/Hero";
 import { PhoneMockup } from "@/components/sections/PhoneMockup";
 import { ValueProps } from "@/components/sections/ValueProps";
@@ -10,6 +11,7 @@ import { Footer } from "@/components/sections/Footer";
 export default function Page() {
   return (
     <main>
+      <RecoveryRedirect />
       <Hero />
       <PhoneMockup />
       <ValueProps />
