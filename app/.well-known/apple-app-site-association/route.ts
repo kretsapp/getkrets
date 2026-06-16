@@ -7,7 +7,7 @@ const AASA = {
     details: [
       {
         appIDs: ["L6YS7PP5XP.com.krets.app"],
-        components: [{ "/": "/join/*" }],
+        components: [{ "/": "/join/*" }, { "/": "/reset-password" }],
       },
     ],
   },
